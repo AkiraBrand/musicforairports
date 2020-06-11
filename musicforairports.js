@@ -6,6 +6,10 @@ const SAMPLE_LIBRARY = {
   //and where in the file structure they can be found
 }
 
+const OCTAVE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+]
+
 
 function getSample(instrument, noteAndOctave) {
   //search the sample library for the instruement
