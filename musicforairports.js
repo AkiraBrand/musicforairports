@@ -10,4 +10,16 @@ const SAMPLE_LIBRARY = {
 function getSample(instrument, noteAndOctave) {
   //search the sample library for the instruement
   //and the closest note and octave to the input
+  //
+  //take noteAndOctave and split them into two sections with
+  //regex or something else
+  //
+  //run octave through parseInt(requestedOctave, 10)
+  //run the notes thorugh flatToSharp method
+  //
+}
+
+function flatToSharp(note){
+  //write a switch(note) function that takes
+  //flat notes as a case and returns the enharmonic sharp
 }
