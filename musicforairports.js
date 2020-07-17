@@ -38,6 +38,14 @@ function noteValue (note, octave) {
     return octave * 12 + SCALE.indexOf(note);
 }
 
-funtion noteDistance (note1, octave1, note2, octave2) {
+function noteDistance (note1, octave1, note2, octave2) {
     return noteValue(note1, octave1) - function noteValue(note2, octave2);
+} 
+
+// It sorts the sample bank array by the absolute distance to the requested note.
+// It then returns the sample with the shortest distance, which will be the first sample 
+// n the sorted array.
+
+function getNearestSample (sampleBank, note, octave) {
+    let sortedBank = sampleBank.slice().sort((sampleA, sampleB))
 }
