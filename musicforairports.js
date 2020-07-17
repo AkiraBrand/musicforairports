@@ -13,8 +13,9 @@ const SAMPLE_LIBRARY =  {
       { note: 'F#', octave: 5, file: 'Samples/Grand Piano/piano-f-f#5.wav' },
       { note: 'F#', octave: 6, file: 'Samples/Grand Piano/piano-f-f#6.wav' },
   ]
-}
+};
 
 function getSample (instrument, noteAndOctave) {
-
+    let[, requestedNote, requestedOctave] = /^(\w[b#]?)(\d)$/.exec(noteAndOctave);
+    requestedOctave = parseInt(requestedOctave, 10);
 }
