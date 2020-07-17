@@ -19,3 +19,14 @@ function getSample (instrument, noteAndOctave) {
     let[, requestedNote, requestedOctave] = /^(\w[b#]?)(\d)$/.exec(noteAndOctave);
     requestedOctave = parseInt(requestedOctave, 10);
 }
+
+function flatToSharp (note) {
+  switch (note) {
+      case 'Bb': return 'A#';
+      case 'Db': return 'C#';
+      case 'Eb': return 'D#';
+      case 'Gb': return 'F#';
+      case 'Ab': return 'G#';
+      default: return note;
+  }
+}
