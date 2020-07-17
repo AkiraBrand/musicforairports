@@ -15,9 +15,12 @@ const SAMPLE_LIBRARY =  {
   ]
 };
 
+const SCALE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
 function getSample (instrument, noteAndOctave) {
     let[, requestedNote, requestedOctave] = /^(\w[b#]?)(\d)$/.exec(noteAndOctave);
     requestedOctave = parseInt(requestedOctave, 10);
+    requestedNote = flatToSharp(requestedNote);
 }
 
 function flatToSharp (note) {
@@ -29,4 +32,12 @@ function flatToSharp (note) {
       case 'Ab': return 'G#';
       default: return note;
   }
+}
+
+function noteValue (note, octave) {
+    return octave * 12 + SCALE.indexOf(note);
+}
+
+funtion noteDistance (note1, octave1, note2, octave2) {
+    return noteValue(note1, octave1) - function noteValue(note2, octave2);
 }
